@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-
 module.exports = {
   content: [
-    "./index.html",
-    `./src/components/**/*.{vue,js}`,
-    `./src/views/**/*.vue`,
-    `./src/plugins/**/*.{js,ts}`,
+    "./components/**/*.{js,vue,ts,tsx,jsx}",
+    "./layouts/**/*.{vue,js,ts,tsx,jsx}",
+    "./pages/**/*.{vue,js,ts,tsx,jsx}",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+    "./app.{vue,js,ts,tsx,jsx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        login: 'url(./src/assets/images/bg-login.png)'
+        login: 'url(@/assets/images/bg-login.png)'
       },
       colors: {
         primary: '#27A376'
@@ -20,7 +21,5 @@ module.exports = {
       }
     },
   },
-  plugins: [
-    require("autoprefixer"),
-  ],
+  plugins: [],
 }
